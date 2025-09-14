@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV - [Votre Nom]</title>
+    <title>CV BOUZIDI AYOUB - Ingénieur Génie Industriel et Logistique</title>
     <style>
         * {
             margin: 0;
@@ -14,200 +14,261 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2c3e50;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #34ac94 100%);
             min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(10px);
             overflow: hidden;
+            position: relative;
         }
 
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 40px;
+            padding: 50px 40px;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-            animation: float 20s ease-in-out infinite;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="3" fill="rgba(255,255,255,0.1)" opacity="0.8"/><circle cx="75" cy="35" r="2" fill="rgba(255,255,255,0.1)" opacity="0.6"/><circle cx="45" cy="65" r="2.5" fill="rgba(255,255,255,0.1)" opacity="0.7"/><circle cx="15" cy="75" r="1.5" fill="rgba(255,255,255,0.1)" opacity="0.5"/></svg>');
+            animation: rotate 30s linear infinite;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-section {
+            position: relative;
+            z-index: 2;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #34ac94, #2a5298);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            font-size: 80px;
             color: white;
-            margin: 0 auto 20px;
-            position: relative;
-            z-index: 1;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
         }
 
         .name {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .title {
-            font-size: 1.3em;
-            opacity: 0.9;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            font-weight: 300;
         }
 
         .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 25px;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 30px;
             transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
         }
 
         .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            font-size: 1.2em;
         }
 
         .main-content {
-            padding: 40px;
+            padding: 50px 40px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
 
         .section {
-            margin-bottom: 30px;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 35px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.9));
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(52, 172, 148, 0.1);
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(135deg, #34ac94, #2a5298);
         }
 
         .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
         .section h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            font-size: 1.5em;
+            color: #1e3c72;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            font-size: 1.6em;
+            font-weight: 600;
             position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .section h2::after {
             content: '';
             position: absolute;
-            bottom: -3px;
+            bottom: 0;
             left: 0;
-            width: 50px;
+            width: 60px;
             height: 3px;
-            background: #764ba2;
+            background: linear-gradient(135deg, #34ac94, #2a5298);
             border-radius: 2px;
         }
 
-        .experience-item, .education-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(52, 172, 148, 0.08), rgba(42, 82, 152, 0.08));
+            border-radius: 15px;
+            border-left: 4px solid #34ac94;
             transition: all 0.3s ease;
+            position: relative;
         }
 
-        .experience-item:hover, .education-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .experience-item:hover, .education-item:hover, .project-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 25px rgba(52, 172, 148, 0.15);
         }
 
-        .job-title, .degree {
-            font-weight: bold;
-            color: #2c3e50;
-            font-size: 1.1em;
-            margin-bottom: 5px;
+        .job-title, .degree, .project-title {
+            font-weight: 700;
+            color: #1e3c72;
+            font-size: 1.2em;
+            margin-bottom: 8px;
         }
 
         .company, .school {
-            color: #667eea;
+            color: #34ac94;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 1.05em;
         }
 
         .date {
-            color: #7f8c8d;
+            color: #2a5298;
             font-size: 0.9em;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-style: italic;
+            font-weight: 500;
+        }
+
+        .description {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .description ul {
+            margin-left: 20px;
+        }
+
+        .description li {
+            margin-bottom: 8px;
         }
 
         .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
         }
 
         .skill {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #34ac94, #2a5298);
             color: white;
-            padding: 8px 15px;
-            border-radius: 25px;
+            padding: 12px 18px;
+            border-radius: 30px;
+            text-align: center;
             font-size: 0.9em;
+            font-weight: 500;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 172, 148, 0.3);
         }
 
         .skill:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(52, 172, 148, 0.4);
+        }
+
+        .skill-category {
+            margin-bottom: 25px;
+        }
+
+        .skill-category h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            border-bottom: 2px solid #34ac94;
+            padding-bottom: 5px;
+            display: inline-block;
         }
 
         .languages {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
         }
 
@@ -215,46 +276,63 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            background: rgba(102, 126, 234, 0.1);
-            border-radius: 8px;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, rgba(52, 172, 148, 0.1), rgba(42, 82, 152, 0.1));
+            border-radius: 12px;
+            border: 1px solid rgba(52, 172, 148, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .language-item:hover {
+            background: linear-gradient(135deg, rgba(52, 172, 148, 0.15), rgba(42, 82, 152, 0.15));
+            transform: translateX(5px);
+        }
+
+        .language {
+            font-weight: 600;
+            color: #1e3c72;
         }
 
         .level {
-            background: #667eea;
+            background: linear-gradient(135deg, #34ac94, #2a5298);
             color: white;
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-size: 0.8em;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
         }
 
         .full-width {
             grid-column: 1 / -1;
         }
 
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 20px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .header {
-                padding: 20px;
-            }
-            
-            .name {
-                font-size: 2em;
-            }
-            
-            .languages {
-                grid-template-columns: 1fr;
-            }
+        .interests {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .interest-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(52, 172, 148, 0.1), rgba(42, 82, 152, 0.1));
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .interest-item:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(52, 172, 148, 0.2), rgba(42, 82, 152, 0.2));
+        }
+
+        .interest-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #34ac94;
         }
 
         .floating-shapes {
@@ -269,33 +347,33 @@
 
         .shape {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(52, 172, 148, 0.1);
             border-radius: 50%;
-            animation: floatShapes 15s ease-in-out infinite;
+            animation: floatShapes 20s ease-in-out infinite;
         }
 
         .shape:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 20%;
-            left: 10%;
+            width: 100px;
+            height: 100px;
+            top: 15%;
+            left: 8%;
             animation-delay: 0s;
         }
 
         .shape:nth-child(2) {
-            width: 120px;
-            height: 120px;
-            top: 60%;
-            right: 15%;
-            animation-delay: 5s;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            right: 10%;
+            animation-delay: 7s;
         }
 
         .shape:nth-child(3) {
-            width: 60px;
-            height: 60px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 10s;
+            width: 80px;
+            height: 80px;
+            bottom: 25%;
+            left: 15%;
+            animation-delay: 14s;
         }
 
         @keyframes floatShapes {
@@ -304,9 +382,60 @@
                 opacity: 0.3;
             }
             50% { 
-                transform: translateY(-30px) rotate(180deg);
-                opacity: 0.6;
+                transform: translateY(-40px) rotate(180deg);
+                opacity: 0.7;
             }
+        }
+
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 30px 25px;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                padding: 30px 25px;
+            }
+            
+            .name {
+                font-size: 2.2em;
+            }
+            
+            .languages {
+                grid-template-columns: 1fr;
+            }
+
+            .interests {
+                gap: 15px;
+            }
+
+            .skills {
+                grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            }
+        }
+
+        .personal-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .info-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -319,25 +448,33 @@
 
     <div class="container">
         <header class="header">
-            <div class="profile-img">👤</div>
-            <h1 class="name">[Votre Nom]</h1>
-            <p class="title">[Votre Titre Professionnel]</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📧</span>
-                    <span>votre.email@example.com</span>
+            <div class="profile-section">
+                <div class="profile-img">🎓</div>
+                <h1 class="name">BOUZIDI AYOUB</h1>
+                <p class="title">Élève Ingénieur en Génie Industriel et Logistique</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span>bouzidiayoub188@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+212 679-843879</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Mohammedia, Maroc</span>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <span>📱</span>
-                    <span>+33 1 23 45 67 89</span>
-                </div>
-                <div class="contact-item">
-                    <span>📍</span>
-                    <span>Votre Ville, Pays</span>
-                </div>
-                <div class="contact-item">
-                    <span>💼</span>
-                    <span>LinkedIn</span>
+                <div class="personal-info">
+                    <div class="info-badge">
+                        <span>🎂</span>
+                        <span>22 ans</span>
+                    </div>
+                    <div class="info-badge">
+                        <span>🚗</span>
+                        <span>Permis B + Véhicule</span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -345,51 +482,147 @@
         <main class="main-content">
             <section class="section full-width">
                 <h2>À Propos de Moi</h2>
-                <p>Écrivez ici une brève description de vous-même, vos objectifs professionnels et ce qui vous motive. Cette section doit donner aux visiteurs une première impression positive et professionnelle de qui vous êtes.</p>
+                <p>Élève ingénieur passionné par l'optimisation des processus industriels et la gestion logistique. Fort d'une solide formation technique et d'expériences pratiques variées, je recherche continuellement l'amélioration des performances et l'innovation dans les systèmes de production. Mon approche analytique et ma créativité me permettent de proposer des solutions efficaces aux défis industriels modernes.</p>
             </section>
 
             <section class="section">
                 <h2>Expérience Professionnelle</h2>
+                
                 <div class="experience-item">
-                    <div class="job-title">Titre du Poste</div>
-                    <div class="company">Nom de l'Entreprise</div>
-                    <div class="date">Janvier 2022 - Présent</div>
-                    <p>Description de vos responsabilités et réalisations dans ce poste.</p>
+                    <div class="job-title">Stagiaire en Gestion Logistique</div>
+                    <div class="company">Eurostyle Systems, Mohammedia</div>
+                    <div class="date">2024 (2 mois)</div>
+                    <div class="description">
+                        <ul>
+                            <li>Analyse des flux logistiques selon le <strong>standard SMB</strong> et étude chronométrique des tâches</li>
+                            <li>Identification des causes d'écarts de charge et proposition de solutions d'amélioration des processus</li>
+                            <li>Élaboration d'un <strong>standard de placement des bacs</strong> pour réduire les tâches inutiles</li>
+                            <li>Développement d'une <strong>application Excel VBA</strong> permettant de calculer le nombre de caristes nécessaires chaque jour</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="experience-item">
-                    <div class="job-title">Poste Précédent</div>
-                    <div class="company">Autre Entreprise</div>
-                    <div class="date">Juin 2020 - Décembre 2021</div>
-                    <p>Description de vos responsabilités et réalisations.</p>
+                    <div class="job-title">Stage Ingénieur – Maintenance et Gestion des Stocks</div>
+                    <div class="company">Amcor Flexibles Mohammedia, Maroc</div>
+                    <div class="date">2024 (1 mois)</div>
+                    <div class="description">
+                        <ul>
+                            <li>Analyse et optimisation de la gestion des stocks via l'ERP <strong>SAP</strong></li>
+                            <li>Identification des articles obsolètes et optimisation des espaces de stockage</li>
+                            <li>Application des outils de classification (<strong>ABC, Pareto</strong>) pour une gestion efficace</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Stage de Fin d'Études – Laverie Industrielle</div>
+                    <div class="company">OCP SAFI, Maroc</div>
+                    <div class="date">2023 (2 mois)</div>
+                    <div class="description">
+                        <ul>
+                            <li>Caractérisation du profil de phosphate (QT, QN)</li>
+                            <li>Étude critique des imperfections des hydrocyclones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Stage d'Initiation – Direction QHSE</div>
+                    <div class="company">COSUMAR, Sidi Bennour</div>
+                    <div class="date">2022 (1 mois)</div>
+                    <div class="description">
+                        <ul>
+                            <li>Découverte approfondie des missions du service <strong>QHSE</strong></li>
+                            <li>Participation aux audits internes QHSE</li>
+                            <li>Gestion des déchets industriels : identification, impact environnemental, stockage et quantification</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
             <section class="section">
                 <h2>Formation</h2>
+                
                 <div class="education-item">
-                    <div class="degree">Nom du Diplôme</div>
-                    <div class="school">Nom de l'École/Université</div>
-                    <div class="date">2018 - 2020</div>
-                    <p>Mention ou spécialisation si applicable.</p>
+                    <div class="degree">Cycle d'Ingénieur – Génie Industriel et Logistique</div>
+                    <div class="school">École Normale Supérieure de l'Enseignement Technique</div>
+                    <div class="date">2023 - 2025 (En cours)</div>
                 </div>
+
                 <div class="education-item">
-                    <div class="degree">Diplôme Précédent</div>
-                    <div class="school">Autre Institution</div>
-                    <div class="date">2015 - 2018</div>
+                    <div class="degree">DUT – Techniques Instrumentales et Management de la Qualité</div>
+                    <div class="school">École Supérieure de Technologie SAFI</div>
+                    <div class="date">2021 - 2023</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="degree">Baccalauréat – Sciences Physiques et Chimie</div>
+                    <div class="school">Lycée Ennaser, Khmiss des Zmamra</div>
+                    <div class="date">2020 - 2021</div>
                 </div>
             </section>
 
             <section class="section">
                 <h2>Compétences</h2>
-                <div class="skills">
-                    <span class="skill">JavaScript</span>
-                    <span class="skill">HTML/CSS</span>
-                    <span class="skill">Python</span>
-                    <span class="skill">React</span>
-                    <span class="skill">Node.js</span>
-                    <span class="skill">SQL</span>
-                    <span class="skill">Git</span>
-                    <span class="skill">Photoshop</span>
+                
+                <div class="skill-category">
+                    <h3>Compétences Techniques</h3>
+                    <div class="skills">
+                        <span class="skill">Gestion Industrielle</span>
+                        <span class="skill">MSP</span>
+                        <span class="skill">Gestion de Production</span>
+                        <span class="skill">Gestion des Stocks</span>
+                        <span class="skill">SAP</span>
+                        <span class="skill">Power BI</span>
+                        <span class="skill">ARENA</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Qualité & Process</h3>
+                    <div class="skills">
+                        <span class="skill">AMDEC</span>
+                        <span class="skill">Diagramme de Pareto</span>
+                        <span class="skill">VSM</span>
+                        <span class="skill">Outils Qualité</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Compétences Informatiques</h3>
+                    <div class="skills">
+                        <span class="skill">Langage C</span>
+                        <span class="skill">VBA</span>
+                        <span class="skill">Excel Avancé</span>
+                        <span class="skill">Word</span>
+                        <span class="skill">PowerPoint</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Projets Académiques</h2>
+                
+                <div class="project-item">
+                    <div class="project-title">Application Excel VBA "DROGUERIE"</div>
+                    <div class="description">
+                        <ul>
+                            <li>Gestion des crédits des clients et fournisseurs</li>
+                            <li>Ajout, suppression et consultation des clients/fournisseurs</li>
+                            <li>Suivi des crédits en cours et historique des transactions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Application VBA pour Facturation et Gestion des Stocks</div>
+                    <div class="description">
+                        <ul>
+                            <li>Automatisation des factures via Excel VBA</li>
+                            <li>Suivi en temps réel des stocks</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -397,20 +630,50 @@
                 <h2>Langues</h2>
                 <div class="languages">
                     <div class="language-item">
-                        <span>Français</span>
-                        <span class="level">Natif</span>
+                        <span class="language">🗣 Arabe</span>
+                        <span class="level">Langue maternelle</span>
                     </div>
                     <div class="language-item">
-                        <span>Anglais</span>
+                        <span class="language">🗣 Français</span>
                         <span class="level">Avancé</span>
                     </div>
                     <div class="language-item">
-                        <span>Espagnol</span>
-                        <span class="level">Intermédiaire</span>
+                        <span class="language">🗣 Anglais</span>
+                        <span class="level">Notions de base</span>
                     </div>
-                    <div class="language-item">
-                        <span>Arabe</span>
-                        <span class="level">Débutant</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Activités Parascolaires</h2>
+                <div class="experience-item">
+                    <div class="job-title">Président du Club GILACTORS</div>
+                    <div class="description">Leadership et organisation d'événements étudiants</div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Responsable Multimédia - Club GILACTORS</div>
+                    <div class="description">Gestion de la communication digitale et des contenus multimédias</div>
+                </div>
+                <div class="experience-item">
+                    <div class="job-title">Membre Actif - Club JLM</div>
+                    <div class="description">Participation active aux activités associatives</div>
+                </div>
+            </section>
+
+            <section class="section full-width">
+                <h2>Centres d'Intérêt</h2>
+                <div class="interests">
+                    <div class="interest-item">
+                        <div class="interest-icon">✈</div>
+                        <span>Voyage</span>
+                    </div>
+                    <div class="interest-item">
+                        <div class="interest-icon">⚽</div>
+                        <span>Sport</span>
+                    </div>
+                    <div class="interest-item">
+                        <div class="interest-icon">🎶</div>
+                        <span>Musique</span>
                     </div>
                 </div>
             </section>
@@ -419,11 +682,11 @@
 
     <script>
         // Animation pour les éléments au scroll
-        const sections = document.querySelectorAll('.section');
+        const sections = document.querySelectorAll('.section, .experience-item, .education-item, .project-item');
         
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -30px 0px'
         };
 
         const observer = new IntersectionObserver(function(entries) {
@@ -437,20 +700,31 @@
 
         sections.forEach(section => {
             section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'all 0.6s ease';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.8s ease';
             observer.observe(section);
         });
 
-        // Effet de parallaxe leger sur les formes flottantes
+        // Effet de parallaxe sur les formes flottantes
         window.addEventListener('mousemove', (e) => {
             const shapes = document.querySelectorAll('.shape');
             const x = e.clientX / window.innerWidth;
             const y = e.clientY / window.innerHeight;
             
             shapes.forEach((shape, index) => {
-                const speed = (index + 1) * 0.5;
+                const speed = (index + 1) * 0.8;
                 shape.style.transform += ` translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+
+        // Animation des compétences au hover
+        document.querySelectorAll('.skill').forEach(skill => {
+            skill.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            skill.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
             });
         });
     </script>
